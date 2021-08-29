@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/js.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <title>R10</title>
+  <link rel="shortcut icon" href="./img/favicon.jfif" />
+</head>
+
+<body>
+  <header class="w100">
+    <nav class="w100">
+      <img src="img/logo-r10.jpg.png" alt="" srcset="">
+      <div class="options-menu">
+        <a href="#"><span>H</span>istória</a>
+        <a href="#"><span>C</span>arreira</a>
+        <a href="#"><span>C</span>omprar</a>
+        <a href="#"><span>M</span>elhores Momentos</a>
+        <a href="#"><span>L</span>ocalização</a>
+      </div>
+      <!--options-menu-->
+      <div class="icon-menu">
+        <input id="search" type="search" name="search" placeholder="Buscar..." onclick="openSearch()">
+        <i class="fas fa-search"></i>
+        <i class="far fa-user-circle"></i>
+        <i class="fas fa-shopping-cart"></i>
+      </div>
+      <!--icon-menu-->
+      <div class="options-menu-mobile">
+
+
+        <div class="device">
+          <div class="container">
+            <button id="burger" class="open-main-nav" title="Botão do menu mobile">
+              <span class="burger"></span>
+            </button>
+            <nav class="main-nav" id="main-nav">
+              <ul>
+                <li>
+                  <a href="#">História</a>
+                </li>
+                <li>
+                  <a href="#">Carreira</a>
+                </li>
+                <li>
+                  <a href="#">Comprar</a>
+                </li>
+                <li>
+                  <a href="#">Momentos</a>
+                </li>
+                <li>
+                  <a href="#">Localização</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+      </div>
+      <!--options-menu-mobile-->
+    </nav>
+  </header>
+
+  <section class="full-banner">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide slide1">
+          <img src="./img/full-banner/img1.jpg" alt="Imagem Ronaldinho">
+        </div>
+        <div class="swiper-slide slide2">
+          <img src="./img/full-banner/img2.jpg" alt="Imagem Ronaldinho">
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/full-banner/img3.jpg" alt="Imagem Ronaldinho">
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/full-banner/img4.jpg" alt="Imagem Ronaldinho">
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/full-banner/img5.jpg" alt="Imagem Ronaldinho">
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        freeMode: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          dynamicBullets: true,
+        },
+      });
+    </script>
+
+    <div class="title-ronaldinho">
+      <h1 id="titleLeft">Ronal</h1>
+      <br>
+      <h2 id="titleRight">dinho</h2>
+    </div><!--title-ronaldinho-->
+
+    <a href="$" class="contact-button">
+      Entre em contato
+      <span>ronaldinho@gaucho.com.br</span>
+    </a>
+
+  </section>
+  <!--full-banner-->
+
+  <section class="history w100">
+    <div class="about w50">
+      <article>
+        <h1>Ronaldo de Assis Moreira</h1>
+        <p>Mais conhecido como Ronaldinho Gaúcho ou simplesmente Ronaldinho, gaúcho, nascido em Porto Alegre, em 21 de
+          março de 1980, é um ex-futebolista brasileiro que atuava como meia-atacante.
+          Atualmente é embaixador do Barcelona, clube em que fez história.</p>
+
+        <p>Uma de suas marcas registradas é o aspecto dentuço, seus dribles fantásticos e usar uma faixa na cabeça após
+          adotar os cabelos longos.
+          Extremamente habilidoso e muito preciso em seus chutes e passes, é considerado por muitos especialistas como o
+          futebolista mais talentoso de sua geração.
+          Popularizou a cobrança de falta por debaixo da barreira.</p>
+
+        <p>Venceu o prêmio Melhor Jogador do Mundo pela FIFA em 2004 e 2005, época em que viveu o grande auge de sua
+          carreira.
+          Foi o primeiro (e ainda é o único) futebolista na história a ter conquistado Liga dos Campeões da UEFA, a
+          Libertadores, a Copa do Mundo e a também ter sido eleito o Melhor do Mundo.
+          Empatado com Cuauhtémoc Blanco, é o maior goleador da Copa das Confederações, com 9 gols.</p>
+
+        <p>Ganhou, em 2013, o prêmio de Rei da América, em eleição anual do diário El País, do Uruguai, desbancando
+          Neymar e Maxi Rodríguez.</p>
+      </article>
+      <div class="btn-cont">
+        <a href="#" class="btn">
+          Trajetória
+          <span class="line-1"></span>
+          <span class="line-2"></span>
+          <span class="line-3"></span>
+          <span class="line-4"></span>
+        </a>
+      </div>
+    </div><!--about-->
+
+    <div class="w50">
+      <div></div>
+      <div></div>
+    </div>
+  </section>
+  <!--history-->
+</body>
+
+</html>

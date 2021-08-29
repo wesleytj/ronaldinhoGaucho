@@ -1,0 +1,567 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Faster+One&display=swap');
+
+/*>>> Global Style <<<*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+.w50 {
+  width: 50%;
+}
+
+.w100 {
+  width: 100%;
+}
+
+// >>> Menu <<<
+header {
+  height: 10%;
+
+  position: fixed;
+  background-color: rgba(38, 38, 38, 0.2);
+  backdrop-filter: blur(5px) brightness(20%);
+  z-index: 10;
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    img {
+      height: 10vh;
+    }
+
+    .options-menu a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      cursor: pointer;
+
+      &:hover{
+
+        & span{
+          color: gold;
+          border-bottom: 1px solid #ccc;
+        }
+      }
+    }
+
+    .icon-menu{
+
+      & input {
+        width: 30px;
+        height: 30px;
+  
+        transform: translate(38px, 0);
+        border: 0;
+        background-color: transparent;
+        outline: none;
+  
+        padding-left: 20px;
+        color: white;
+        cursor: pointer;
+        transition: 1s;
+  
+        &::placeholder {
+          color: #ccc;
+        }
+      }
+
+      & i {
+        font-size: 20px;
+        color: white;
+        margin: 0 10px;
+        cursor: pointer;
+      }
+    }
+
+    .options-menu-mobile {
+      display: none;
+    }
+  }
+}
+
+// >>> Sessao Full Banner <<<
+.full-banner{
+  
+  .title-ronaldinho{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 2;
+    h1{
+      position: relative;
+      top: 3.5vh;
+      left: -320%;
+      transition: .85s;
+  
+      font-family: 'Faster One', cursive;
+      font-size: 100px;
+      color: black;
+      text-shadow: gold -8px 3px;
+  
+      z-index: 1;
+    }
+  
+    h2{
+      position: relative;
+      bottom: 3.5vh;
+      right: -335%;
+      transition: .85s;
+  
+      font-family: 'Faster One', cursive;
+      font-size: 100px;
+      color: gold;
+      text-shadow: #000 -10px 3px;
+
+  
+      z-index: 1;
+    }
+  }
+
+  .contact-button {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 1.2em;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    padding: 20px 60px 20px 55px;
+    transition: 0.3s ease-in-out;
+
+    z-index: 1;
+    
+    span {
+        text-transform: none;
+        position: absolute;
+        color: #ee283e;
+        top: 20px;
+        left: 30px;
+        opacity: 0;
+        transition: all 0s ease 0s;
+    }
+    &:hover {
+        transition: 0.3s ease-in-out;
+        border: 2px solid #fff;
+        border-radius: 50px;
+        background-color: #fff;
+        
+        &>span {
+            opacity: 1;
+            transition: all 0.25s ease-in-out 0.1s;
+        }
+        
+        &:before {
+            transition: 0.3s ease-in-out;
+            background-color: #ee283e;
+        }
+    }
+    
+    
+    &:before, &:after {
+        content: "";
+        position: absolute;
+        top: -14px;
+        left: -12px;
+        width: 132px;
+        height: 25px;
+    }
+    &:before {
+        border: 2px solid #ee283e;
+        background-color: #1f3944;
+        transform: skew(-25deg);
+        transition: 0.3s ease-in-out;
+    }
+    
+    &:after {
+        content: "Vem com o bruxo";
+        font-size: 0.45em;
+        top: -7px;
+        left: 0px;
+        color: #fff;
+    }
+    
+    
+}
+
+}
+
+/*>>> Search Effect <<<*/
+.openSearch {
+  width: 200px !important;
+  border-bottom: 1px solid #ccc !important;
+}
+
+// >>> Swiper - Full Banner <<<
+.swiper{
+  height: 100vh;
+
+    .swiper-slide img{
+      width: 100%;
+      height: 100%;
+
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+}
+
+// >>> Sessão Sobre <<<
+.history{
+  height: 900px;
+  .about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ee283e;
+    article{
+      height: 500px;
+
+      h1{
+        margin: 20px 0;
+      }
+      p{
+        max-width: 500px;
+        text-align: justify;
+      }
+    }
+
+    .btn-cont {
+      text-align: center;
+      
+      .btn {
+        position: relative;
+        padding: 20px 70px;
+        border: 1px solid #000;
+        color: #000;
+        text-decoration: none;
+        font-size: em(18px);
+        font-family: 'Open Sans', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        -webkit-font-smoothing: antialiased;
+        
+        &:hover {
+          border: none;
+          
+          .line-1 {
+            animation: move1 1500ms infinite ease;
+          }
+          
+          .line-2 {
+            animation: move2 1500ms infinite ease;
+          }
+          
+          .line-3 {
+            animation: move3 1500ms infinite ease;
+          }
+          
+          .line-4 {
+            animation: move4 1500ms infinite ease;
+          }
+        }
+      }
+      
+      .line-1 {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 1px;
+        background-color: #000;
+        left: 0;
+        bottom: 0;
+      }
+      .line-2 {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 1px;
+        background-color: #000;
+        left: 0;
+        top: 0;
+      }
+      .line-3 {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 1px;
+        background-color: #000;
+        right: 0;
+        top: 0;
+      }
+      .line-4 {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 1px;
+        background-color: #000;
+        right: 0;
+        bottom: 0;
+      }
+    }
+    
+    @keyframes move1 {
+      0% {
+        height: 100%; 
+        bottom: 0;
+      }
+      54% {
+        height: 0; 
+        bottom: 100%;
+      }
+      55% {
+        height: 0; 
+        bottom: 0;
+      }
+      100% {
+        height: 100%; 
+        bottom: 0;
+      }
+    }
+    
+    @keyframes move2 {
+      0% {
+        width: 0;
+        left: 0;
+      }
+      50% {
+        width: 100%; 
+        left: 0;
+      }
+      100% {
+        width: 0; 
+        left: 100%;
+      }
+    }
+    
+    @keyframes move3 {
+      0% {
+        height: 100%; 
+        top: 0;
+      }
+      54% {
+        height: 0; 
+        top: 100%;
+      }
+      55% {
+        height: 0; 
+        top: 0;
+      }
+      100% {
+        height: 100%; 
+        top: 0;
+      }
+    }
+    
+    @keyframes move4 {
+      0% {
+        width: 0; 
+        right: 0;
+      }
+      55% {
+        width: 100%; 
+        right: 0;
+      }
+      100% {
+        width: 0; 
+        right: 100%;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+/*>>> Screen Mobile <<<*/
+@media screen and (max-width: 825px) {
+  .options-menu {
+    display: none;
+  }
+
+  .options-menu-mobile {
+    display: block !important;
+
+    /* Main menu positionning */
+    .main-nav {
+      position: absolute;
+      top: 150;
+      right: 0;
+      left: 0;
+      text-align: center;
+      background: #FFF;
+      opacity: 0;
+      z-index: -1;
+      visibility: hidden;
+      transition: all .375s;
+    }
+
+    .main-nav.is-open {
+      height: 100vh;
+      margin-top: 28px;
+      opacity: 1;
+      z-index: 100;
+      visibility: visible;
+    }
+
+    /* Gray band effect */
+    .main-nav::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: -15px;
+      background: rgba(38, 38, 38, 0.2);
+      transform-origin: 0 0;
+      transform: skew(-14deg) translateX(-120%);
+      transition: all .275s .1s;
+    }
+
+    .main-nav.is-open::before {
+      transform: skew(-14deg) translateX(0);
+    }
+
+    /* Skewing effect on menu links */
+    .main-nav ul {
+      width: 30%;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-end;
+      transform: translateX(58%) skew(-16deg);
+    }
+
+    .main-nav li {
+      display: block;
+      margin: .5rem 0;
+      text-align: right;
+      transform: skew(16deg);
+    }
+
+    /* Apparition effect on links */
+    .main-nav a {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+
+    .main-nav.is-open a {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .main-nav li:nth-child(1) a {
+      transition: all 275ms 175ms
+    }
+
+    .main-nav li:nth-child(2) a {
+      transition: all 275ms 225ms
+    }
+
+    .main-nav li:nth-child(3) a {
+      transition: all 275ms 275ms
+    }
+
+    .main-nav li:nth-child(4) a {
+      transition: all 275ms 325ms;
+    }
+
+    .main-nav li:nth-child(5) a {
+      transition: all 275ms 375ms
+    }
+
+
+    /* Decoration */
+    .main-nav ul,
+    .main-nav li {
+      list-style: none;
+      padding: 0;
+    }
+
+    .main-nav a {
+      display: block;
+      padding: 12px 0;
+      color: #5A3B5D;
+      font-size: 1.4em;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .open-main-nav {
+      top: 15px;
+      padding-top: 20px;
+      right: 15px;
+      z-index: 1000;
+      background: none;
+      border: 0;
+      cursor: pointer;
+    }
+
+    .open-main-nav:focus {
+      outline: none;
+    }
+
+    .burger {
+      position: relative;
+      display: block;
+      width: 28px;
+      height: 4px;
+      margin: 0 auto;
+      background: #fff;
+      transform: skew(5deg);
+      transition: all .275s;
+    }
+
+    .burger:after,
+    .burger:before {
+      content: '';
+      display: block;
+      height: 100%;
+      background: #fff;
+      transition: all .275s;
+    }
+
+    .burger:after {
+      transform: translateY(-12px) translateX(-2px) skew(-20deg);
+    }
+
+    .burger:before {
+      transform: translateY(-16px) skew(-10deg);
+    }
+
+    /* Toggle State part */
+    .is-open .burger {
+      transform: skew(5deg) translateY(-8px) rotate(-45deg);
+    }
+
+    .is-open .burger:before {
+      transform: translateY(0px) skew(-10deg) rotate(75deg);
+    }
+
+    .is-open .burger:after {
+      transform: translateY(-12px) translateX(10px) skew(-20deg);
+      opacity: 0;
+    }    
+  }
+
+
+
+}
